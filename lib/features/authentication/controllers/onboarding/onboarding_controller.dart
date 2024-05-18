@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../screens/login/login.dart';
+import '../../screens/options_learner_educator/options_screen.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();
@@ -23,7 +24,8 @@ class OnBoardingController extends GetxController {
   void nextPage() {
     if (currentPageIndex.value == 2) {
       Get.offAll(
-        const LoginScreen(),
+        // const LoginScreen(),
+        const Options(),
       );
     } else {
       int page = currentPageIndex.value + 1;
