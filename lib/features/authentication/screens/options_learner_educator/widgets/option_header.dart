@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
-import '../../../../../utils/constants/text_strings.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
-class TLoginHeader extends StatelessWidget {
-  const TLoginHeader({
-    super.key,
-  });
+class OptionHeader extends StatelessWidget {
+  const OptionHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +14,13 @@ class TLoginHeader extends StatelessWidget {
       children: [
         Image(
           height: 150,
-          image: AssetImage(
-              dark ? TImages.lightAppLogo : TImages.darkAppLogo),
+          image: AssetImage(dark ? TImages.lightAppLogo : TImages.darkAppLogo),
         ),
-        Text(TTexts.loginTitle,
+        Text('Select your role',
             style: Theme.of(context).textTheme.headlineMedium),
         const SizedBox(height: TSizes.sm),
-        Text(TTexts.loginSubTitle,
+        Text(
+            'Teach or learn any skills, begin your journey after selecting any of the below role.',
             style: Theme.of(context).textTheme.bodyMedium),
       ],
     );
