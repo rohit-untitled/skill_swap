@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:skillswap/features/authentication/screens/learner_login/learner_login.dart';
+import 'package:skillswap/navigation_menu_educator.dart';
 import 'package:skillswap/utils/constants/sizes.dart';
 import '../../../../common/styles/spacing_styles.dart';
-import '../../../../navigation_menu.dart';
+import '../educator_login/educator_login.dart';
 import 'widgets/option_buttons.dart';
 import 'widgets/option_header.dart';
 
@@ -13,7 +15,7 @@ class Options extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.grey[200],
       body: Padding(
         padding: TSpacingStyle.paddingWithAppBarHeight,
         child: Column(
@@ -28,12 +30,14 @@ class Options extends StatelessWidget {
                 OptionButtons(
                   heading: 'Learner',
                   onTap: () => Get.to(
-                    () => const NavigationMenu(),
+                    () => const LearnerLogin(),
                   ),
                 ),
                 OptionButtons(
                   heading: 'Educator',
-                  onTap: () {},
+                  onTap: () => Get.to(
+                    () => const EducatorLogin(),
+                  ),
                 ),
               ],
             ),

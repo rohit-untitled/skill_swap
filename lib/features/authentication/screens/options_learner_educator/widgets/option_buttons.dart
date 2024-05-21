@@ -27,19 +27,19 @@ class OptionButtons extends StatelessWidget {
                 BoxShadow(
                   color: Colors.grey.shade500,
                   offset: const Offset(4, 4),
-                  blurRadius: 12,
+                  blurRadius: 8,
                   spreadRadius: 1,
                 ),
                 // top left shadow is lighter
                 const BoxShadow(
                   color: Colors.white,
                   offset: Offset(-4, -4),
-                  blurRadius: 12,
+                  blurRadius: 8,
                   spreadRadius: 1,
                 )
               ],
             ),
-            child: const Text('Hello'),
+            child: const Text('logo'),
           ),
           const SizedBox(
             height: TSizes.spaceBtwItems,

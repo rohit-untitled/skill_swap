@@ -1,8 +1,5 @@
-
 import 'package:flutter/material.dart';
-
 import '../../../../../common/widgets/appbar/appbar.dart';
-import '../../../../../common/widgets/products/cart/cart_menu_icon.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/text_strings.dart';
 
@@ -17,7 +14,7 @@ class THomeAppBar extends StatelessWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(TTexts.homeAppbarTitle,
+          Text('Good day to learn something',
               style: Theme.of(context)
                   .textTheme
                   .labelMedium!
@@ -29,12 +26,6 @@ class THomeAppBar extends StatelessWidget {
                   .apply(color: TColors.white)),
         ],
       ),
-      actions: [
-        TCartCounterIcon(
-          onPressed: () {},
-          iconColor: TColors.white,
-        ),
-      ],
     );
   }
 }

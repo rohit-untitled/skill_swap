@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:skillswap/features/authentication/screens/learner_login/learner_login.dart';
 
 import '../../screens/login/login.dart';
 import '../../screens/options_learner_educator/options_screen.dart';
@@ -24,6 +25,7 @@ class OnBoardingController extends GetxController {
   void nextPage() {
     if (currentPageIndex.value == 2) {
       Get.offAll(
+        // const LearnerLogin(),
         // const LoginScreen(),
         const Options(),
       );

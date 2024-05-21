@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:skillswap/features/shop/screens/educator_details/educator_details.dart';
 import '../../../../features/shop/screens/product_details/product_details.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
@@ -8,7 +9,6 @@ import '../../../../utils/constants/sizes.dart';
 import '../../../../utils/helpers/helper_functions.dart';
 import '../../../styles/shadows.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
-import '../../icons/t_circular_icon.dart';
 import '../../images/t_rounded_images.dart';
 import '../../texts/product_price_text.dart';
 import '../../texts/product_title_text.dart';
@@ -23,7 +23,8 @@ class TProductCartVertical extends StatelessWidget {
 
     // container with side paddin, color, edges, radius and shadows
     return GestureDetector(
-      onTap: () => Get.to(() => const ProductDetails()),
+      // onTap: () => Get.to(() => const ProductDetails()),
+      onTap: () => Get.to(() => const EducatorDetails()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -33,43 +34,27 @@ class TProductCartVertical extends StatelessWidget {
           color: dark ? TColors.darkGrey : TColors.white,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // thumbnail, wishlist,discount
             TRoundedContainer(
               height: 180,
               padding: const EdgeInsets.all(TSizes.sm),
               backgroundColor: dark ? TColors.dark : TColors.light,
-              child: Stack(
+              child: const Stack(
                 children: [
                   // thumbnail image
-                  const TRoundedImage(
-                      imageUrl: TImages.productImage1, applyImageRadius: true),
-
-                  // sale tag
-                  Positioned(
-                    top: 12,
-                    child: TRoundedContainer(
-                      radius: TSizes.sm,
-                      backgroundColor: TColors.secondary.withOpacity(0.8),
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: TSizes.sm, vertical: TSizes.xs),
-                      child: Text(
-                        '25%',
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge!
-                            .apply(color: TColors.black),
-                      ),
-                    ),
-                  ),
+                  TRoundedImage(
+                      imageUrl: TImages.userProfileImage3,
+                      applyImageRadius: true),
 
                   // Favourite icon button
-                  const Positioned(
-                    top: 0,
-                    right: 0,
-                    child:
-                        TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
-                  )
+                  // const Positioned(
+                  //   top: 0,
+                  //   right: 0,
+                  //   child:
+                  //       TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
+                  // )
                 ],
               ),
             ),
@@ -81,48 +66,14 @@ class TProductCartVertical extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  TProductTitleText(
-                      title: 'Green Nike Air Shoes', smallSize: true),
+                  TProductTitleText(title: 'David Sharma', smallSize: true),
                   SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleWithVerifiedIcon(title: 'Nike'),
+                  TBrandTitleWithVerifiedIcon(title: 'Python, gardening..'),
+                  SizedBox(height: TSizes.spaceBtwItems),
+                  TPoductPriceText(price: '34.0 /hour'),
                 ],
               ),
             ),
-
-            const Spacer(),
-
-            // price row
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                //price
-                const Padding(
-                  padding: EdgeInsets.only(left: TSizes.sm),
-                  child: TPoductPriceText(price: '34.0'),
-                ),
-
-                //add to cart button
-                Container(
-                  decoration: const BoxDecoration(
-                    color: TColors.dark,
-                    borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(TSizes.cardRadiusMd),
-                        bottomRight:
-                            Radius.circular(TSizes.productImageRadius)),
-                  ),
-                  child: const SizedBox(
-                    width: TSizes.iconLg * 1.2,
-                    height: TSizes.iconLg * 1.2,
-                    child: Center(
-                      child: Icon(
-                        Iconsax.add,
-                        color: TColors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),
