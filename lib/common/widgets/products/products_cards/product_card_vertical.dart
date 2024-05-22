@@ -48,13 +48,7 @@ class TProductCartVertical extends StatelessWidget {
                       imageUrl: TImages.userProfileImage3,
                       applyImageRadius: true),
 
-                  // Favourite icon button
-                  // const Positioned(
-                  //   top: 0,
-                  //   right: 0,
-                  //   child:
-                  //       TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
-                  // )
+                 
                 ],
               ),
             ),

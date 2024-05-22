@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class THttpHelper {
-  static const String _baseUrl = 'https://your-api-base-url.com'; // Replace with your API base URL
+  static const String _baseUrl = 'https://skillswap-3pae.onrender.com/'; // Replace with your API base URL
 
   // Helper method to make a GET request
   static Future<Map<String, dynamic>> get(String endpoint) async {

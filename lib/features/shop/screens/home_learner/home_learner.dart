@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skillswap/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:skillswap/features/shop/screens/home_learner/fetch_api/fetch_api.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/products_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
+import '../../../../models/educators.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -18,6 +20,7 @@ class HomeLearner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final ApiService apiService = ApiService();
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -80,11 +83,39 @@ class HomeLearner extends StatelessWidget {
                     onPressed: () => Get.to(() => const AllProducts()),
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
-                  //popular products
 
-                  TGridLayout(
-                    itemCount: 4,
-                    itemBuilder: (_, index) => const TProductCartVertical(),
+                  // Educators lists
+                  FutureBuilder<List<Educator>>(
+                    future: apiService.fetchEducators(),
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Center(child: CircularProgressIndicator());
+                      } else if (snapshot.hasError) {
+                        return Center(child: Text('Error: ${snapshot.error}'));
+                      } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                        return const Center(child: Text('No educators found'));
+                      } else {
+                        return ListView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemCount: snapshot.data!.length,
+                          itemBuilder: (context, index) {
+                            final educator = snapshot.data![index];
+                            return Card(
+                              margin: const EdgeInsets.symmetric(vertical: 10),
+                              child: ListTile(
+                                title: Text(educator.name),
+                                subtitle: Text(educator.description),
+                                trailing: Text('\$${educator.charges.toStringAsFixed(2)}'),
+                                onTap: () {
+                                  // Handle tap
+                                },
+                              ),
+                            );
+                          },
+                        );
+                      }
+                    },
                   ),
                 ],
               ),

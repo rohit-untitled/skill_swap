@@ -23,7 +23,7 @@ dependencies:
   lottie: ^3.1.0
   connectivity_plus: ^5.0.1
   flutter_native_splash: ^2.3.2
-
+  fluttertoast: ^8.0.9
   # Icons
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.2
