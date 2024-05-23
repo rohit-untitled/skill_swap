@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/appbar/appbar.dart';
-import '../../../../common/widgets/products/sortable/sortable_products.dart';
 import '../../../../common/widgets/products/sortable/sortable_upcoming_sessions.dart';
 import '../../../../utils/constants/sizes.dart';
 

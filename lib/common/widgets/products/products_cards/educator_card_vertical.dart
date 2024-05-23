@@ -12,8 +12,8 @@ import '../../texts/product_price_text.dart';
 import '../../texts/product_title_text.dart';
 import '../../texts/t_brand_title_text_with_verified_icon.dart';
 
-class TProductCartVertical extends StatelessWidget {
-  const TProductCartVertical({super.key});
+class EducatorCardVertical extends StatelessWidget {
+  const EducatorCardVertical({super.key});
 
   @override
   Widget build(BuildContext context) {
