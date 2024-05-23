@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:skillswap/features/shop/screens/educator_details/educator_details.dart';
-import '../../../../features/shop/screens/product_details/product_details.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -47,14 +45,6 @@ class TProductCartVertical extends StatelessWidget {
                   TRoundedImage(
                       imageUrl: TImages.userProfileImage3,
                       applyImageRadius: true),
-
-                  // Favourite icon button
-                  // const Positioned(
-                  //   top: 0,
-                  //   right: 0,
-                  //   child:
-                  //       TCircularIcon(icon: Iconsax.heart5, color: Colors.red),
-                  // )
                 ],
               ),
             ),

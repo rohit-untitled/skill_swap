@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'features/personalization/screens/settings/settings.dart';
 import 'features/personalization/screens/settings_educator/setting_educator.dart';
-import 'features/shop/screens/home/home.dart';
 import 'features/shop/screens/home_educator/home_educator.dart';
 import 'features/shop/screens/notification_educator/notification_educator.dart';
-import 'features/shop/screens/store/store.dart';
-import 'features/shop/screens/wishlist/wishlist.dart';
 import 'utils/constants/colors.dart';
 import 'utils/helpers/helper_functions.dart';
 

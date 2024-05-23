@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:readmore/readmore.dart';
 import 'package:skillswap/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:skillswap/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:skillswap/features/shop/screens/time_slots/timeslot_screen.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../personalization/screens/address/address.dart';
-import '../product_details/widgets/bottom_add_to_cart_widget.dart';
 import '../product_details/widgets/product_detail_image_slider.dart';
 import '../product_details/widgets/rating_share_widget.dart';
 import '../product_reviews/product_reviews.dart';

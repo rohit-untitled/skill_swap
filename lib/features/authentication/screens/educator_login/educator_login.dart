@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:skillswap/features/authentication/screens/educator_login/widgets/educator_login_form.dart';
-import 'package:skillswap/features/authentication/screens/learner_login/widgets/learner_login_form.dart';
 
 import '../../../../common/styles/spacing_styles.dart';
 import '../../../../common/widgets/login_signup/form_divider.dart';

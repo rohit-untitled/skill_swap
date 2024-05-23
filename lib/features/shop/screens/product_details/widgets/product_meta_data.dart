@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../common/widgets/custom_shapes/containers/rounded_container.dart';
-import '../../../../../common/widgets/images/t_circular_image.dart';
 import '../../../../../common/widgets/texts/product_title_text.dart';
-import '../../../../../common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
-import '../../../../../utils/constants/colors.dart';
-import '../../../../../utils/constants/enums.dart';
-import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 

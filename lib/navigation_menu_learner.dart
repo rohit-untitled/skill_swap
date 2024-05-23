@@ -3,12 +3,8 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:skillswap/features/shop/screens/home_learner/home_learner.dart';
 
-import 'features/personalization/screens/settings/settings.dart';
 import 'features/personalization/screens/settings_learner/setting_learner.dart';
-import 'features/shop/screens/home/home.dart';
 import 'features/shop/screens/notificaiton_learner/notificaiton_learner.dart';
-import 'features/shop/screens/store/store.dart';
-import 'features/shop/screens/wishlist/wishlist.dart';
 import 'utils/constants/colors.dart';
 import 'utils/helpers/helper_functions.dart';
 

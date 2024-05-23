@@ -9,8 +9,6 @@ import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../../shop/screens/order/orders.dart';
-import '../address/address.dart';
 import '../profile/profile.dart';
 
 class SettingLearner extends StatelessWidget {
